@@ -6,12 +6,18 @@
 
 package json
 
-import "github.com/json-iterator/go"
+import jsoniter "github.com/json-iterator/go"
 
 var (
-	json          = jsoniter.ConfigCompatibleWithStandardLibrary
-	Marshal       = json.Marshal
+	json = jsoniter.ConfigCompatibleWithStandardLibrary
+	// Marshal is exported by gin/json package.
+	Marshal = json.Marshal
+	// Unmarshal is exported by gin/json package.
+	Unmarshal = json.Unmarshal
+	// MarshalIndent is exported by gin/json package.
 	MarshalIndent = json.MarshalIndent
-	NewDecoder    = json.NewDecoder
-	NewEncoder    = json.NewEncoder
+	// NewDecoder is exported by gin/json package.
+	NewDecoder = json.NewDecoder
+	// NewEncoder is exported by gin/json package.
+	NewEncoder = json.NewEncoder
 )
